@@ -1,8 +1,24 @@
-def call_google_api():
+# from google.cloud import vision
 
-def generate_greeting(name,relation,context,image):
-    # get keywords using google api
-    # Match google API keywords and input text to similarity matching algorithms
-    
+# def call_google_api(image):
+#     # Instantiates a client
+#     client = vision.ImageAnnotatorClient()
 
+#     # Loads the image into memory
+#     with io.open(file_name, 'rb') as image_file:
+#         content = image_file.read()
 
+#     image = vision.Image(content=content)
+
+#     #Performs label detection on the image file
+#     response = client.label_detection(image=image)
+#     labels = response.label_annotations
+
+# print('Labels:')
+# for label in labels:
+#     print(label.description)
+
+# def generate_greeting(name,relation,context,image):
+#     # get keywords using google api
+#     # Match google API keywords and input text to similarity matching algorithms
+#     keywords = call_google_api(image)

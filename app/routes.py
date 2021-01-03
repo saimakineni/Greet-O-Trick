@@ -1,4 +1,5 @@
 from flask import render_template, url_for, request
+from werkzeug.utils import secure_filename
 from app import app
 from src.utils import utils
 
@@ -13,7 +14,8 @@ def get_greeting():
         name = request.form.get('name')
         relation = request.form.get('relation')
         context = request.form.get('context')
-
+       # greeting = utils.generate_greeting(name,relation,context,image)
+        print(secure_filename(image.filename))
         return render_template('greetings.html')
     
     return render_template('greetings.html')

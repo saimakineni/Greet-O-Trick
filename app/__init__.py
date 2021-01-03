@@ -1,5 +1,5 @@
 from flask import Flask
 
-app = Flask("greet-o-treet")
+app = Flask(__name__)
 
 from app import routes
