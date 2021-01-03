@@ -23,5 +23,5 @@ def generate_greeting(name, relation, context, image_name):
     keywords = [label.description for label in labels]
     keywords.extend([name, relation, context])
     greeting = similarity.get_high_score_text(keywords, 'data/greetings_newyear.pickle')
-
+    
     return greeting

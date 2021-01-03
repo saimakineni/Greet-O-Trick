@@ -19,6 +19,6 @@ def get_greeting():
         image.save(os.path.join('data/images', image.filename))
 
         greeting = utils.generate_greeting(name, relation, context, image.filename)
-        return render_template('greetings.html')
+        return render_template('generated_greeting.html', greeting = greeting)
     
     return render_template('greetings.html')
