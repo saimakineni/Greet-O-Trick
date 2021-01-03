@@ -5,9 +5,10 @@
     </head>
     <body>
         <form action="{{ url_for('get_greeting') }}" method="post" enctype="multipart/form-data">
-            <h1><strong>Greet or Treet</strong> </h1>
+            <h1><strong>GreetoTreet</strong> </h1>
             <div class="form-group">
-              <label for="title">Create Greeting For :</label>
+              <label for="title">Greeting Generated :</label>
+              <h1><img src="{{image}}"> </h1>
               <p>
                 {{ greeting }}
               </p>

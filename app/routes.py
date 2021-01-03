@@ -4,6 +4,7 @@ import os
 
 from app import app
 from src.utils import utils
+import io
 
 @app.route('/')
 def index():
@@ -19,6 +20,13 @@ def get_greeting():
         image.save(os.path.join('data/images', image.filename))
 
         greeting = utils.generate_greeting(name, relation, context, image.filename)
+        
+        # #Passing image
+        # with io.open(os.path.join('data/images', image), 'rb') as image_file:
+        #     content = image_file.read()
+
+        # image = vision.Image(content=content)
+
         return render_template('generated_greeting.html', greeting = greeting)
     
     return render_template('greetings.html')
