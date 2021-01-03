@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" media="screen"/>
+    </head>
+    <body>
+        <form action="{{ url_for('get_greeting') }}" method="post" enctype="multipart/form-data">
+            <h1><strong>Greet or Treet</strong> </h1>
+            <div class="form-group">
+              <label for="title">Create Greeting For :</label>
+              <p>
+                {{ greeting }}
+              </p>
+            </div>
+ 
+          </form>      
+    </body>
+</html>
