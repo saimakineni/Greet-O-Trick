@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" media="screen"/>
+    </head>
+    <body>
+        <form action="{{ url_for('get_greeting') }}" method="post">
+            <h1><strong>Greet or Treet</strong> </h1>
+            <div class="form-group">
+              <label for="title">Create Greeting For :</label>
+              <input type="text" name="name" id="title" class="form-controll"/>
+            </div>
+            <div class="form-group">
+              <label for="caption">Relation To You :</label>
+              <input type="text" name="relation" id="caption" class="form-controll"/>
+            </div>
+            <div class="form-group">
+              <label for="caption">Greeting Context :</label>
+              <input type="text" name="context" id="caption" class="form-controll"/>
+            </div>
+            
+            <div class="form-group file-area">
+                  <label for="images">Images <span>Your images should be at least 400x300 wide</span></label>
+              <input type="file" name="image" id="images" required="required" multiple="multiple"/>
+              <div class="file-dummy">
+                <div class="success">Great, your files are selected. Keep on.</div>
+                <div class="default">Please select some files</div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <button type="submit">Upload images</button>
+            </div> 
+          </form>      
+    </body>
+</html>
